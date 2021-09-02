@@ -1,0 +1,25 @@
+package katatemplateproject;
+ 
+import java.util.Arrays;
+
+public class KataTemplateProject {
+    public static void main(String[] args) {
+        prnt(Kata.reverseLetter("abc"));
+    }
+    public static <T> void prnt(T args){
+        System.out.println(args);
+    } 
+}
+class Kata {
+    public static String reverseLetter(final String str) {
+        String newstr=str.toLowerCase();
+        char[] ch = newstr.toCharArray();
+        String str2="";
+        for(int i=newstr.length()-1;i>=0;i--){
+            if(ch[i]>=97 && ch[i]<=122){
+                str2+=ch[i];
+            }
+        }
+        return str2; //coding and coding..
+    }
+}
