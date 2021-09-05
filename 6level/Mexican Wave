@@ -1,0 +1,44 @@
+package katatemplateproject;
+import java.util.*;
+import java.util.regex.*;
+public class KataTemplateProject {
+    public static void main(String[] args) {
+        String hello = "two words";
+        for(String s:MexicanWave.wave(hello)){
+            prnt(s);
+        }
+    }
+    public static <T> void prnt(T args){
+        System.out.println(args);
+    } 
+}
+class MexicanWave {
+
+    public static String[] wave(String str) {
+        if(str.isEmpty()){
+            return new String[] {};
+        }
+        String[] splitstr = new String[str.length()];
+        StringBuilder strbuild = new StringBuilder();
+        for(int i=0;i<splitstr.length;i++){
+            if(str.charAt(i)==' '){
+                continue;
+            }
+            strbuild.append(str).setCharAt(i, Character.toUpperCase(str.charAt(i)));
+            splitstr[i]=strbuild.toString();
+            strbuild.setLength(0);
+        }
+        ArrayList<String> strList = new ArrayList<String>();
+        for(String s:splitstr){
+            if(s!="null" & s!=null){
+                strList.add(s);
+            }
+        }
+        String[] result = new String[strList.size()];
+        for(int i=0;i<result.length;i++){
+            result[i] = strList.get(i);
+        }
+        return result;
+    }
+    
+}
