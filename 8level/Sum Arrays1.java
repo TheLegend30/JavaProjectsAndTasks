@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.regex.*;
 public class KataTemplateProject {
     public static void main(String[] args) {
-        prnt(Kata.dontGiveMeFive(1, 16));
+
     }
 
     public static <T> void prnt(T args){
