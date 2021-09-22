@@ -1,0 +1,18 @@
+package katatemplateproject;
+
+import java.util.*;
+
+public class KataTemplateProject {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double rad = in.nextDouble();
+        AreaCircle ar = radius -> Math.round(Math.pow(radius, 2) * Math.PI);
+        System.out.println(ar.AOC(rad));
+    }
+}
+
+interface AreaCircle {
+
+    double AOC(double radius);
+}
